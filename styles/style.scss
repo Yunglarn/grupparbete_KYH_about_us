@@ -1,0 +1,56 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    margin: 0 auto;
+
+
+    .flex-bild {
+        /* margin-left: 30%; */
+        @include element-bg;
+        float: left;
+        margin-right: 10px;
+    }
+
+    .flex-text {
+        padding-left: 10px;
+        font-size: 24px;
+        margin-bottom: 3em;
+    }
+}
+
+.galleri {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    columns: 4 300px;
+    column-gap: 1em;
+
+
+img {
+    display: block;
+    margin-bottom: 1em;
+    width: 100%;
+
+}
+}
+@media (max-width: 800px) {
+    .flex-container .flex-text {
+        font-size: 16px;
+    }
+}
+@media (max-width: 800px){
+    .flex-bild {
+    width: 150px;
+  }
+}

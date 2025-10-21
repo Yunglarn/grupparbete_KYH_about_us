@@ -1,0 +1,6 @@
+@use "variables" as *;
+
+@mixin element-bg {
+    border: solid 6px $element-color;
+    border-radius: 20px;
+}
